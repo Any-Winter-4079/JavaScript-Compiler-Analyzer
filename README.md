@@ -1,3 +1,7 @@
-# JavaScript-Compiler
+# JavaScript-Compiler-Analyzer
 
-JavaScript compiler (analysis phase)
+A Python-based JavaScript compiler (analysis phase) featuring:
+
+* Lexer
+* Parser
+* Semmantic Analysis
