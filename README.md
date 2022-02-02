@@ -6,9 +6,9 @@ Python-based (pseudo) JavaScript compiler including:
 * Syntax Analyzer
 * Semmantic Analyzer
 
-Running: python3 compiler_analyzer.py file
+To run: python3 compiler_analyzer.py file
 
-Generates:
+Running the compiler generates:
 
 * tokens.txt
 * parse.txt
