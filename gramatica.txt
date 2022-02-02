@@ -1,0 +1,58 @@
+Axioma = P
+NoTerminales = { P  CompSent Fun Assign Exp Body SimpleSent Type Init Exp2 Exp3 Exp2P Exp3P Exp4 CallParams RetRes Then Assign1 AssignOrCall MoreCallParams RetType FunArgs MoreFunArgs ExpP PosCall }
+Terminales = { for ( ; ) {  } if let id = number boolean string %= || > * ent cad alert input return , function }
+Producciones = {
+P -> CompSent P 
+P -> Fun P
+P -> lambda
+CompSent -> for (  Assign ;  Exp ;  Assign  ) {  Body  }
+CompSent -> if ( Exp ) Then
+CompSent -> let Type id Init ;
+CompSent -> SimpleSent
+Then -> SimpleSent
+Then -> { Body }
+Init -> = Exp
+Init -> lambda
+Type -> number
+Type -> boolean
+Type -> string
+Assign -> id Assign1
+Assign1 -> = Exp
+Assign1 -> %= Exp
+Exp -> Exp2 ExpP
+ExpP -> || Exp2 ExpP
+ExpP -> lambda 
+Exp2 -> Exp3 Exp2P
+Exp2P -> > Exp3 Exp2P
+Exp2P -> lambda
+Exp3 -> Exp4 Exp3P
+Exp3P -> * Exp4 Exp3P
+Exp3P -> lambda
+Exp4 -> id PosCall
+Exp4 -> ent
+Exp4 -> cad
+Exp4 -> ( Exp )
+PosCall -> ( CallParams )
+PosCall -> lambda 
+SimpleSent -> id AssignOrCall ;
+SimpleSent -> alert ( Exp ) ;
+SimpleSent -> input ( id ) ;
+SimpleSent -> return RetRes ;
+AssignOrCall -> Assign1
+AssignOrCall -> ( CallParams )
+CallParams -> Exp MoreCallParams
+CallParams -> lambda
+MoreCallParams -> , Exp MoreCallParams
+MoreCallParams -> lambda
+RetRes -> Exp
+RetRes -> lambda
+Fun -> function RetType id ( FunArgs ) { Body }
+RetType -> Type
+RetType -> lambda
+FunArgs -> Type id MoreFunArgs
+FunArgs -> lambda
+MoreFunArgs -> , Type id MoreFunArgs
+MoreFunArgs -> lambda
+Body -> CompSent Body
+Body -> lambda
+}
