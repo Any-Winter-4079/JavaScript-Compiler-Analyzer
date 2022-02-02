@@ -2,8 +2,8 @@
 
 Python-based (pseudo) JavaScript compiler (analysis phase) providing:
 
-* Lexical Analyzer
-* Syntax Analyzer
+* Lexical Analyzer (Lexer)
+* Syntax Analyzer (Parser)
 * Semmantic Analyzer
 
 To run: python3 compiler_analyzer.py file
