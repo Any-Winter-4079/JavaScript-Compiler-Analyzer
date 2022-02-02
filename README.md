@@ -1,6 +1,6 @@
 # JavaScript-Compiler-Analyzer
 
-Python-based (pseudo) JavaScript compiler including:
+Python-based (pseudo) JavaScript compiler (analysis phase) providing:
 
 * Lexical Analyzer
 * Syntax Analyzer
