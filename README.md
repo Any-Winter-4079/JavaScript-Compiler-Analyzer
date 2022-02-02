@@ -2,6 +2,6 @@
 
 A Python-based JavaScript compiler (analysis phase) featuring:
 
-* Lexer
-* Parser
-* Semmantic Analysis
+* Lexical Analyzer
+* Syntax Analyzer
+* Semmantic Analyzer
